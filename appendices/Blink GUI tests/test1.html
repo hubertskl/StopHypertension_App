@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang = "pl">
+<head>
+	<title>Test1</title>
+	<meta charset = "utf-8">
+	<link rel = "stylesheet" type = "text/css" href = "">
+</head>
+
+<style type="text/css">
+
+
+</style>
+
+<body>
+
+	Hello, please input five values you want to work with :)<br><br>
+	
+	<form id="values">
+		value1: <input type="number" name="value1" id="value1"><br>
+		value2: <input type="number" name="value2" id="value2"><br>
+		value3: <input type="number" name="value3" id="value3"><br>
+		value4: <input type="number" name="value4" id="value4"><br>
+		value5: <input type="number" name="value5" id="value5"><br><br>
+		<input type="button" onclick="addToArray()" value="Submit">
+	</form>
+		
+	<script>
+		function addToArray() {
+		var val1 = document.getElementById("value1").value;
+		var val2 = document.getElementById("value2").value;
+		var val3 = document.getElementById("value3").value;
+		var val4 = document.getElementById("value4").value;
+		var val5 = document.getElementById("value5").value;
+		
+		Blink.msg("press", val1)
+		Blink.msg("press", val2)
+		Blink.msg("press", val3)
+		Blink.msg("press", val4)
+		Blink.msg("press", val5)
+		}
+		
+		
+	</script>
+	
+
+
+</body>
+</html>
