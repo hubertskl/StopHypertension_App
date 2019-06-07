@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang = "pl">
+<head>
+	<title>StopHypertension App</title>
+	<meta charset = "utf-8">
+	<link rel = "stylesheet" type = "text/css" href = "">
+</head>
+
+<style type="text/css">
+
+
+</style>
+
+<body>
+
+	<form id="user_form">
+		Gender:<br>
+		<input type="radio" name="gender" value=1 id="gender" checked> Female<br>
+		<input type="radio" name="gender" value=2 id="gender"> Male<br><br>
+		Age:<br>
+		<input type="radio" name="age" value=1 id="age" checked> 19 - 30<br>
+		<input type="radio" name="age" value=2 id="age"> 31 - 50<br>
+		<input type="radio" name="age" value=3 id="age"> 51+<br><br>
+		Activity level:<br>
+		<input type="radio" name="activity" value=2 id="activity" checked> Sedentary<br>
+		<input type="radio" name="activity" value=3 id="activity"> Moderately active<br>
+		<input type="radio" name="activity" value=4 id="activity"> Active<br><br>
+		<input type="button" onclick="send_user()" value="Submit">
+	</form>
+	
+	<script>
+		function get_checked_radio(radios) {
+			for (var i = 0; i < radios.length; i++) {
+				var current = radios[i];
+				if (current.checked) {
+				return current;
+				}
+			}
+		}
+	
+		function send_user() {
+			var gender_options = document.getElementsByName("gender");
+			var age_options = document.getElementsByName("age");
+			var activity_options = document.getElementsByName("activity");
+			var gender = get_checked_radio(gender_options).value;
+			var age = get_checked_radio(age_options).value;
+			var activity = get_checked_radio(activity_options).value;
+			
+			Blink.msg("get_user", gender)
+			Blink.msg("get_user", age)
+			Blink.msg("get_user", activity)
+		}
+	</script>
+
+
+</body>
+</html>

@@ -8,19 +8,48 @@
 
 <style type="text/css">
 
+body {
+	background: rgb(119, 132, 153);
+}
+
+h1 {
+	color: white;
+	font-family: "Courier New";
+}
+
+#values {
+	color: white;
+}
+
+input[type = number] {
+	margin-top: 1px;
+	background-color: white;
+	color: black;
+	border: 1px black;
+	border-radius: 7px;
+}
+
+input[type = button] {
+	margin-top: 5px;
+	background-color: white;
+	color: black;
+	border: 1px black;
+	border-radius: 7px;
+}
+
 
 </style>
 
 <body>
 
-	Hello, please input five values you want to work with :)<br><br>
+	<h1>Hello, please input five values you want to work with :)</h1><br><br>
 	
 	<form id="values">
 		value1: <input type="number" name="value1" id="value1"><br>
 		value2: <input type="number" name="value2" id="value2"><br>
 		value3: <input type="number" name="value3" id="value3"><br>
 		value4: <input type="number" name="value4" id="value4"><br>
-		value5: <input type="number" name="value5" id="value5"><br><br>
+		value5: <input type="number" name="value5" id="value5"><br>
 		<input type="button" onclick="addToArray()" value="Submit">
 	</form>
 		
